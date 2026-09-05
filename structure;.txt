@@ -1,0 +1,44 @@
+desc users;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| user_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(25) | YES  |     | NULL    |                |
+| email    | varchar(50) | YES  |     | NULL    |                |
+| password | varchar(25) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+ desc babies;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| baby_id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| user_id       | int(11)     | YES  | MUL | NULL    |                |
+| baby_name     | varchar(25) | NO   |     | NULL    |                |
+| date_of_birth | date        | NO   |     | NULL    |                |
+| gender        | varchar(15) | NO   |     | NULL    |                |
+| parent_name   | varchar(25) | NO   |     | NULL    |                |
+| phone_no      | bigint(20)  | NO   |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+
+desc vaccines;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| vaccine_id      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| vaccine_name    | varchar(50)  | NO   |     | NULL    |                |
+| importance      | varchar(150) | NO   |     | NULL    |                |
+| recommended_age | varchar(100) | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+
+ desc vaccination_records;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| record_id      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| baby_id        | int(11)     | YES  | MUL | NULL    |                |
+| vaccine_id     | int(11)     | YES  | MUL | NULL    |                |
+| vaccation_date | date        | YES  |     | NULL    |                |
+| status         | varchar(50) | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+
