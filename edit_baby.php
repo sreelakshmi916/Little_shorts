@@ -38,7 +38,8 @@
 		echo"<label for='name'>Phone No</label>";
 		echo"<input type='tel' name='phone' value='$row[phone_no]'><br><br>";
 		echo"<input type='submit' value='Update'>";
-}
+		echo "<br><br><a href='babies.php?user_id=".$user_id."'>Cancel</a>";
+		echo "<br><br><a href='home_new.php?user_id=".$user_id."'>Home</a>";}
 ?>
 </form>
 </body>
