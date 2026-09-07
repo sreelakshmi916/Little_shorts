@@ -19,6 +19,7 @@
 		echo"<input type='text' name='imp' value='$row[importance]'><br><br>";
 		echo"<label for='age'>Recommended age</label>";
 		echo"<input type='text' name='age' value='$row[recommended_age]'><br><br>";
+		echo"<input type='number' name='days' value='$row[recommended_days]'><br><br>";
 		echo"<input type='submit' value='Update'>";
 }
 ?>
@@ -31,7 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$name=$_POST['name'];
 	$imp=$_POST['imp'];
 	$age=$_POST['age'];
-	$res=mysqli_query($conn,"update vaccines set vaccine_name='$name',importance='$imp',recommended_age='$age' where vaccine_id=$vaccine_id");
+	$days=$_POST['days'];
+	$res=mysqli_query($conn,"update vaccines set vaccine_name='$name',importance='$imp',recommended_age='$age',recommended_days='$days' where vaccine_id=$vaccine_id");
 	header("location:manage_vaccines.php");
 }
+?>
 ?>
