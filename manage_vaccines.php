@@ -13,4 +13,5 @@
 <!DOCTYPE html>
 <html>
 <a href="add_vaccine.php">Add New Vaccine</a><br><br>
+<a href="admin_home.php">Admin Home</a>
 </html>
