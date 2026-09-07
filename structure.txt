@@ -8,7 +8,7 @@ desc users;
 | password | varchar(25) | YES  |     | NULL    |                |
 +----------+-------------+------+-----+---------+----------------+
 
- desc babies;
+  desc babies;
 +---------------+-------------+------+-----+---------+----------------+
 | Field         | Type        | Null | Key | Default | Extra          |
 +---------------+-------------+------+-----+---------+----------------+
@@ -20,18 +20,18 @@ desc users;
 | parent_name   | varchar(25) | NO   |     | NULL    |                |
 | phone_no      | bigint(20)  | NO   |     | NULL    |                |
 +---------------+-------------+------+-----+---------+----------------+
-
 desc vaccines;
-+-----------------+--------------+------+-----+---------+----------------+
-| Field           | Type         | Null | Key | Default | Extra          |
-+-----------------+--------------+------+-----+---------+----------------+
-| vaccine_id      | int(11)      | NO   | PRI | NULL    | auto_increment |
-| vaccine_name    | varchar(50)  | NO   |     | NULL    |                |
-| importance      | varchar(150) | NO   |     | NULL    |                |
-| recommended_age | varchar(100) | YES  |     | NULL    |                |
-+-----------------+--------------+------+-----+---------+----------------+
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| vaccine_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| vaccine_name     | varchar(50)  | NO   |     | NULL    |                |
+| importance       | varchar(150) | NO   |     | NULL    |                |
+| recommended_age  | varchar(100) | YES  |     | NULL    |                |
+| recommended_days | int(11)      | YES  |     | NULL    |                |
++------------------+--------------+------+-----+---------+----------------+
 
- desc vaccination_records;
+  desc vaccination_records;
 +----------------+-------------+------+-----+---------+----------------+
 | Field          | Type        | Null | Key | Default | Extra          |
 +----------------+-------------+------+-----+---------+----------------+
@@ -40,5 +40,6 @@ desc vaccines;
 | vaccine_id     | int(11)     | YES  | MUL | NULL    |                |
 | vaccation_date | date        | YES  |     | NULL    |                |
 | status         | varchar(50) | YES  |     | NULL    |                |
+| due_date       | date        | YES  |     | NULL    |                |
 +----------------+-------------+------+-----+---------+----------------+
 
